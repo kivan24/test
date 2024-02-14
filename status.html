@@ -18,6 +18,8 @@ class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         self.do_GET()
 
 if __name__ == '__main__':
+    # to run code: 
+    # nohup python server.py > output.log 2>&1 &
     host = ''
     port = 443
     httpd = BaseHTTPServer.HTTPServer((host, port), MyHandler)
