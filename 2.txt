@@ -1,0 +1,10 @@
+def inputString = "Привіт, мoє iм'я"
+def pattern = ~/[a-zA-Z]/
+
+def matcher = (inputString =~ pattern)
+
+if (matcher.find()) {
+    println "Латинські літери знайдені на позиції: ${matcher.start()} - ${matcher.end() - 1}"
+} else {
+    println "Латинських літер у рядку немає"
+}
