@@ -3,8 +3,8 @@ def pattern = ~/[a-zA-Z]/
 
 def matcher = (inputString =~ pattern)
 
-if (matcher.find()) {
-    println "Латинські літери знайдені на позиції: ${matcher.start()} - ${matcher.end() - 1}"
-} else {
-    println "Латинських літер у рядку немає"
+while (matcher.find()) {
+    def letter = matcher.group()
+    def position = matcher.start() + 1
+    println "${letter} - ${position}"
 }
